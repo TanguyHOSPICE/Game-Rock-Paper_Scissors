@@ -31,6 +31,11 @@ const game = () => {
 				compareHands(this.textContent, computerChoice);
 			});
 		});
+		//Updating score
+		const playerscore = document.querySelectorAll(".player-score p");
+		const computerscore = document.querySelectorAll(".computer-score p");
+		playerscore.textContent = pScore;
+		computercore.textContent = cScore;
 	};
 	//Compare Hands
 	const compareHands = (playerChoice, computerChoice) => {
@@ -44,9 +49,13 @@ const game = () => {
 		if (playerChoice === 'rock') {
 			if (computerChoice === 'scissors') {
 				winner.textContent = "Player wins";
+				pScore++;
+				updateScore();
 				return;				
 			} else {
 				winner.textContent = "Computer wins";
+				cScore++;
+				updateScore();
 				return;
 			}
 		}
@@ -54,9 +63,13 @@ const game = () => {
 		if (playerChoice === 'paper') {
 			if (computerChoice === 'scissors') {
 				winner.textContent = "Computer wins";
+				cScore++;
+				updateScore();
 				return;				
 			} else {
 				winner.textContent = "Player wins";
+				pScore++;
+				updateScore();
 				return;
 			}
 		}
@@ -64,9 +77,13 @@ const game = () => {
 		if (playerChoice === 'scissors') {
 			if (computerChoice === 'rock') {
 				winner.textContent = "Computer wins";
+				cScore++;
+				updateScore();
 				return;				
 			} else {
 				winner.textContent = "Player wins";
+				pScore++;
+				updateScore();
 				return;
 			}
 		}
