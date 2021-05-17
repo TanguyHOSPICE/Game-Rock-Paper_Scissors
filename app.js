@@ -4,18 +4,18 @@ const game = () => {
 
 	//Start the Game
 	const startGame = () => {
+		const playBtn = document.querySelector(".intro button");
 		const introScreen = document.querySelector(".intro");
 		const match = document.querySelector(".match");
-		const playBtn = document.querySelector(".intro button");
 
 		playBtn.addEventListener("click", () => {
-			introScreen.classList.add('fadeOut');
-			match.classList.add('fadeIn');
+			introScreen.classList.add("fadeOut");
+			match.classList.add("fadeIn");
 		});
 	};
 	//Is call all the inner function
 	startGame();
-	updateScore();
+	// updateScore();
 };
 //start the game function
 game();
