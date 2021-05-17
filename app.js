@@ -50,10 +50,12 @@ const game = () => {
 			});
 		});
 		//Updating score
-		const playerscore = document.querySelectorAll(".player-score p");
-		const computerscore = document.querySelectorAll(".computer-score p");
-		playerscore.textContent = pScore;
-		computercore.textContent = cScore;
+		const updateScore = () => {
+			const playerscore = document.querySelectorAll(".player-score p");
+			const computerscore = document.querySelectorAll(".computer-score p");
+			playerscore.textContent = pScore;
+			computercore.textContent = cScore;
+		}
 
 	};
 	//Compare Hands
@@ -109,8 +111,7 @@ const game = () => {
 	};
 	//Is call all the inner function
 	startGame();
-	playMatch();
-	// updateScore();
+	playMatch(); 
 };
 //start the game function
 game();
