@@ -24,6 +24,7 @@ const game = () => {
 		//Select Options
 		options.forEach(option => {
 			option.addEventListener("click", function () {
+				//Computer Choice
 				const computerNumber = Math.floor(Math.random() * 3);
 				const computerChoice = computerOptions[computerNumber];
 				//Here is where we call compare hands
