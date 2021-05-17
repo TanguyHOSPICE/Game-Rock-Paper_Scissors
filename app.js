@@ -28,9 +28,6 @@ const game = () => {
 				const computerChoice = computerOptions[computerNumber];
 				//Here is where we call compare hands
 				compareHands(this.textContent, computerChoice);
-				//Update Images
-				playerHand.src = `./assets/${this.textContent}.png`;
-				computerHand.src = `./assets/${computerChoice}.png`;
 			});
 		});
 	};
@@ -46,11 +43,9 @@ const game = () => {
 		if (playerChoice === 'rock') {
 			if (computerChoice === 'scissors') {
 				winner.textContent = "Player wins";
-				pScore++;
 				return;				
 			} else {
 				winner.textContent = "Computer wins";
-				cScore++;
 				return;
 			}
 		}
@@ -58,11 +53,9 @@ const game = () => {
 		if (playerChoice === 'paper') {
 			if (computerChoice === 'scissors') {
 				winner.textContent = "Computer wins";
-				cScore++;
 				return;				
 			} else {
 				winner.textContent = "Player wins";
-				pScore++;
 				return;
 			}
 		}
@@ -70,12 +63,10 @@ const game = () => {
 		if (playerChoice === 'scissors') {
 			if (computerChoice === 'rock') {
 				winner.textContent = "Computer wins";
-				cScore++;
 				return;				
 			} else {
 				winner.textContent = "Player wins";
-				pScore++;
-				return;
+			return;
 			}
 		}
 	};
