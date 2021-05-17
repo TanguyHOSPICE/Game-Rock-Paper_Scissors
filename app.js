@@ -67,7 +67,7 @@ const game = () => {
 				return;				
 			} else {
 				winner.textContent = "Player wins";
-			return;
+				return;
 			}
 		}
 	};
